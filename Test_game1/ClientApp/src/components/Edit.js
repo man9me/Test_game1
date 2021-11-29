@@ -24,7 +24,7 @@ export class Edit extends Component {
             loading: false,
             create:false,
             stats: {  id:"",name: "na", description: "sdf", mana: 100, hp: 90, x: 0, y: 0, maxMana: 200, maxHp: 100,
-                armor: 1, magResist: 1, attac: 10, AttackDistance:1, class: "Warrior" }
+                armor: 1, magResist: 1, attac: 10, attackDistance:1, class: "Warrior" }
         };
         this.create = this.create.bind(this);
 
@@ -90,7 +90,7 @@ export class Edit extends Component {
                         <Field id={"MaxMana"} name={'maxMana'} label={'MaxMana'} hint={'MaxMana on'} component={FormNumericTextBox} validator={requiredValidator} />
                         <Field id={"Armor"} name={'armor'} label={'armor'} hint={'MaxMana on'} component={FormNumericTextBox} validator={requiredValidator} />
                         <Field id={"magResist"} name={'magResist'} label={'magResist'} hint={'MaxMana on'} component={FormNumericTextBox} validator={requiredValidator} />
-                        <Field id={"AttackDistance"} name={'AttackDistance'} label={'AttackDistance'} hint={'MaxMana on'} component={FormNumericTextBox} validator={requiredValidator} />
+                        <Field id={"AttackDistance"} name={'attackDistance'} label={'AttackDistance'} hint={'MaxMana on'} component={FormNumericTextBox} validator={requiredValidator} />
 
                         <Field id={"x"} name={'x'} label={'x'} hint={'MaxMana on'} component={FormNumericTextBox} validator={requiredValidator} />
                         <Field id={"y"} name={'y'} label={'y'} hint={'MaxMana on'} component={FormNumericTextBox} validator={requiredValidator} />

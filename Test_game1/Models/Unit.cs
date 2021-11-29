@@ -54,7 +54,14 @@ namespace Test_game1.Models
         [Range(0, 999)]
         public int attack { get; set; }
         
-
+        //поменять на енум всетаки
+        public enum ClassesEnum
+        {
+            Warrior,
+            Mage,
+            Archer,
+        }
+        
        [BsonRequired] 
        [Required]
        [RegularExpression(@"(?:^|\W)Warrior(?:$|\W)|(?:^|\W)Mage(?:$|\W)|(?:^|\W)Archer(?:$|\W)")]
