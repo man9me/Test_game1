@@ -30,7 +30,7 @@ namespace Test_game1.Engine.Attac
                "Warrior" => (Action) (() => {attackPair=AttackWarrior(attackPair); }),
                "Mage" => (Action) (() => {attackPair=AttackMage(attackPair); }),
                "Archer" => (Action) (() => { attackPair=AttackArcher(attackPair);}),
-               _ => (Action)(async () => { }),
+               _ => (Action)( () => { }),
            };
             s.Invoke();
             return ((attackPair.units), attackPair.damage, attackPair.effective);
@@ -67,8 +67,6 @@ namespace Test_game1.Engine.Attac
            var dmg = (baseDmg * coef);
            var armor = attackPair.units.Item2.MagResist;
            var damage = dmg - armor;
-           
-           
            if (damage < 1)
            {
                attackPair.effective = false;

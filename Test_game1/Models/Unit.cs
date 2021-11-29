@@ -58,6 +58,7 @@ namespace Test_game1.Models
        [BsonRequired] 
        [Required]
        [RegularExpression(@"(?:^|\W)Warrior(?:$|\W)|(?:^|\W)Mage(?:$|\W)|(?:^|\W)Archer(?:$|\W)")]
+       //enum
        public string Class { get; set; }
 
        [BsonRequired] [Required] public int AttackDistance { get; set; } = 1;

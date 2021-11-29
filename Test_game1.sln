@@ -12,5 +12,6 @@ Global
 		{2F15C7EE-84D1-4840-BFFE-F53EEAD54080}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F15C7EE-84D1-4840-BFFE-F53EEAD54080}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F15C7EE-84D1-4840-BFFE-F53EEAD54080}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F15C7EE-84D1-4840-BFFE-F53EEAD54080}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

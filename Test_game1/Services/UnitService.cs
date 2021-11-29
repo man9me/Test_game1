@@ -11,17 +11,11 @@ namespace Test_game1.Services
 
         public UnitService(IUnitsDbSettings settings)
         {
-            /*var client = new MongoClient(settings.ConnectionString);
-            var database = client.GetDatabase(settings.DatabaseName);
-
-            _units = database.GetCollection<Unit>(settings.UnitsCollectionName);
-            Console.WriteLine(settings.ConnectionString);
-            */
-
+            
                 var settingss = MongoClientSettings.FromConnectionString(settings.ConnectionString);
                 var client = new MongoClient(settingss);
                 _units = client.GetDatabase(settings.DatabaseName).GetCollection<Unit>(settings.UnitsCollectionName);
-                //this.Populate();this.Populate();this.Populate();
+                this.Populate();
         }
 
         public List<Unit> Get() =>
@@ -76,8 +70,24 @@ namespace Test_game1.Services
             u2.MaxHp = 200;
             u2.MaxMana = 50;
             
-            Units.Add(u1);
+            var u3 = new Unit();
+            u3.armor = 2;
+            u3.hp = 150;
+            u3.mana = 40;
+            u3.x = 5;
+            u3.y = 8;
+            u3.attack = 25;
+            u3.Class = "Archer";
+            u3.Description = "Moses do his thing";
+            u3.Name = "ark";
+            u3.MagResist = 10;
+            u3.MaxHp = 170;
+            u3.MaxMana = 100;
+            u3.AttackDistance = 15;
+            
+            Units.Add(u3);
             Units.Add(u2);
+            Units.Add(u1);
             _units.InsertManyAsync(Units);
             
         }

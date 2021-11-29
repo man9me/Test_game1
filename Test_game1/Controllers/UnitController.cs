@@ -30,7 +30,6 @@ namespace Test_game1.Controllers
     {
     var a=_unitService.Get();
     
-    Console.WriteLine(a[0].Description);
         return a;
     }
     
@@ -50,8 +49,6 @@ namespace Test_game1.Controllers
         [HttpPost]
         public ActionResult<Unit> Create(Unit unit)
         {   
-            Console.WriteLine("post");
-            Console.WriteLine(unit);
             _unitService.Create(unit);
 
             return CreatedAtRoute("GetUnit", new {id = unit.Id.ToString()}, unit);
@@ -60,8 +57,7 @@ namespace Test_game1.Controllers
         [HttpPut("{id:length(24)}")]
         public IActionResult Update(string id, Unit unitIn)
         {
-            Console.WriteLine("put");
-            Console.WriteLine(unitIn);
+           
             var unit = _unitService.Get(id);
 
             if (unit == null)
@@ -89,7 +85,7 @@ namespace Test_game1.Controllers
             return NoContent();
         }
         
-        /*[HttpPost("attack/{id1:length(24)}/{id2:length(24)}")]
+        [HttpPost("attack/{id1:length(24)}/{id2:length(24)}")]
         public ActionResult<UnitAttacks> Get(string id1,string id2)
         {
             Console.WriteLine(id1);
@@ -109,6 +105,6 @@ namespace Test_game1.Controllers
                 _unitService.Update(id2, attack.units.Item2);
                 return attack;
             }
-        }*/
+        }
     }
 }

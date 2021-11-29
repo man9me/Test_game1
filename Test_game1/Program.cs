@@ -1,13 +1,8 @@
-using System;
+
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System.Configuration;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
-using Microsoft.OpenApi.Models;
-using MongoDB.Bson;
-using MongoDB.Driver;
 using Test_game1.Models;
 using Test_game1.Services;
 
@@ -27,7 +22,7 @@ builder.Services.AddSingleton<IUnitsDbSettings>(sp =>
 
     
 
-builder.Services.AddSwaggerGen(options =>
+/*builder.Services.AddSwaggerGen(options =>
 {
     options.SwaggerDoc("v1", new OpenApiInfo
     {
@@ -46,7 +41,7 @@ builder.Services.AddSwaggerGen(options =>
             Url = new Uri("https://example.com/license")
         }
     });
-});
+});*/
 
 var app = builder.Build();
 
@@ -56,12 +51,12 @@ if (!app.Environment.IsDevelopment())
 {
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
-    app.UseSwagger();
+    /*app.UseSwagger();
     app.UseSwaggerUI(options =>
     {
         options.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
         options.RoutePrefix = string.Empty;
-    });
+    });*/
 }
 
 app.UseHttpsRedirection();

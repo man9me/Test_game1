@@ -14,9 +14,11 @@ namespace Test_game1.Services
             var database = client.GetDatabase(settings.DatabaseName);
             
             _attacks = database.GetCollection<UnitAttacks>(settings.AttacksCollectionName);*/
+            /*
             var settingss = MongoClientSettings.FromConnectionString(settings.ConnectionString);
             var client = new MongoClient(settingss);
             _attacks = client.GetDatabase(settings.DatabaseName).GetCollection<UnitAttacks>(settings.AttacksCollectionName);
+            */
 
         }
         
